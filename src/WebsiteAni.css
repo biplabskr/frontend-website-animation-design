@@ -1,0 +1,758 @@
+/* $space-blue: #000028;
+$strgba(255,255,255,0.7);
+$text-dark: $space-blue;
+$text-light: #eee; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    width: 100%;
+    height: 100vh;
+    background: black;
+
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+}
+
+.low {
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+
+    position: absolute;
+    background-color: #000028;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%);
+    background-size: 4px 4px, 3px 3px, 5px 5px, 3px 3px, 6px 6px, 4px 4px, 5px 5px, 4px 4px, 6px 6px, 3px 3px, 5px 5px, 4px 4px, 3px 3px, 6px 6px, 5px 5px, 4px 4px, 5px 5px, 6px 6px;
+    background-position: 20% 10%, 5% 20%, 10% 75%, 22% 35%, 30% 30%, 40% 50%, 45% 20%, 65% 20%, 85% 30%, 98% 90%, 20% 80%, 50% 80%, 75% 80%, 89% 75%, 90% 95%, 60% 70%, 65% 40%, 90% 20%;
+    background-repeat: no-repeat;
+    animation: twinkle ease-in 0.3s infinite;
+
+}
+
+@keyframes twinkle {
+    to {
+        background-image:
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, rgba(255, 255, 255, 0.7) 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%),
+            radial-gradient(circle, #fff 20%, transparent 30%);
+    }
+}
+
+.middle {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+
+}
+
+.top {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    pointer-events: none;
+}
+
+.top img {
+    width: 340px;
+    height: 400px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 10;
+    animation: astronautFly 25s infinite alternate linear;
+}
+
+@keyframes astronautFly {
+
+    0% {
+        transform: rotate(20deg);
+    }
+
+    50% {
+        transform: rotate(35deg);
+        transform: translateX(300%)
+    }
+
+    100% {
+        transform: rotate(-10deg);
+        transform: translateY(50%)
+    }
+
+}
+
+
+
+.work {
+
+    width: 100%;
+    height: 100vh;
+    /* border: .5rem solid red; */
+    position: absolute;
+
+
+}
+
+.container {
+
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.navbar {
+
+    width: 100%;
+    height: 20%;
+    /* border: .2rem solid blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: kajiro;
+    font-weight: 700;
+    color: rgb(253, 251, 249);
+
+}
+
+.logo {
+
+    font-size: 4rem;
+    /* text-shadow: #FC0 1px 0 10px; */
+    cursor: pointer;
+}
+
+.logo:hover {
+
+    text-shadow: #FC0 1px 0 10px, #FC0 1px 0 30px;
+
+
+}
+
+li {
+    list-style: none;
+    position: relative;
+}
+
+.menu-list ul {
+
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+
+}
+
+.buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+
+button {
+
+
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: transparent;
+    border: .1rem solid #B2BEB5;
+    color: #fff;
+    pointer-events: all;
+}
+
+.btns:hover {
+   
+    box-shadow: 0 0 5px aqua, 0 0 25px aqua, 0 0 50px aqua, 0 0 200px aqua;
+    animation: glw1 1s steps(1);
+
+}
+
+@keyframes glw1 {
+
+    0%{
+        box-shadow: 0 0 5px aqua
+    }
+    14.2857143%{
+
+        box-shadow: none;
+    }
+    28.5714286%{
+        box-shadow: 0 0 5px aqua,0 0 25px aqua;
+    }
+    42.8571429%{ 
+        box-shadow: none;
+    }
+    57.1428572%{
+        box-shadow: 0 0 5px aqua, 0 0 25px aqua, 0 0 50px aqua;
+    }
+    71.4300002%{
+        box-shadow: none;
+    }
+    85.7157145%{
+
+        box-shadow: 0 0 5px aqua, 0 0 25px aqua, 0 0 50px aqua, 0 0 200px aqua;
+
+    }
+    100%{
+
+        box-shadow: 0 0 5px aqua, 0 0 25px aqua, 0 0 50px aqua, 0 0 200px aqua,0 0 400px aqua;
+
+    }
+
+
+    
+}
+
+.buttons button:nth-child(1) {
+
+    padding: 14px 36.28px;
+
+}
+
+.buttons button:nth-child(2) {
+
+    padding: 14px 30px;
+
+}
+
+li:hover {
+
+    cursor: pointer;
+
+    .span1 {
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        height: 2px;
+        background-color: aqua;
+        animation: slide1 1.5s infinite alternate;
+        box-shadow: 0 0 5px aqua, 0 0 25px aqua;
+    }
+
+    .span2 {
+        position: absolute;
+        bottom: 0%;
+        right: 50%;
+        height: 2px;
+        background-color: aqua;
+        animation: slide2 1.5s infinite alternate;
+        box-shadow: 0 0 5px aqua, 0 0 25px aqua;
+    }
+
+}
+
+@keyframes slide1 {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 50%;
+
+    }
+
+}
+
+@keyframes slide2 {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 50%;
+
+    }
+
+}
+
+.hero {
+    width: 100%;
+    height: 80%;
+    /* border: .1rem solid gold; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.left-hero {
+
+    width: 40%;
+    height: 100%;
+    /* border: .2rem solid yellowgreen; */
+    display: flex;
+    padding: 8% 0 0 0;
+    font-size: 7rem;
+    gap: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    pointer-events: none;
+
+}
+
+h3 {
+    font-weight: bold;
+}
+
+h3 span {
+    color: #FC0;
+    position: relative;
+}
+
+.left-hero p {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: .15rem;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.left-hero button {
+
+    width: 15rem;
+    height: 4rem;
+    position: relative;
+    pointer-events: all;
+    margin: 0 auto;
+
+    &:hover {
+        box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow, 0 0 200px yellow;
+        -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+    
+    }
+
+}
+
+.right-hero {
+    width: 35%;
+    height: 100%;
+    /* border: .2rem solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 90%;
+    height: 60%;
+    /* border: .2rem solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.login span {
+
+    position: absolute;
+
+}
+
+.login span:nth-child(1) {
+
+    position: absolute;
+
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, #000028, aqua);
+    top: 0;
+    left: 0;
+    animation: slidy1 1.5s infinite;
+
+}
+
+@keyframes slidy1 {
+
+    0% {
+        left: 0%;
+    }
+
+    100% {
+
+        left: 50%;
+    }
+
+}
+
+
+
+.login span:nth-child(2) {
+
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background: linear-gradient(180deg, #000028, aqua);
+    top: 0;
+    right: 0;
+    animation: slidy2 1.5s 2.5s infinite;
+
+}
+
+@keyframes slidy2 {
+
+    0% {
+        top: 0%;
+    }
+
+    100% {
+
+        top: 50%;
+    }
+
+}
+
+.login span:nth-child(3) {
+
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(270deg, #000028, aqua);
+    bottom: 0;
+    right: 0;
+    animation: slidy3 1.5s 1s infinite;
+
+
+}
+
+@keyframes slidy3 {
+
+    0% {
+        right: 0%;
+    }
+
+    100% {
+
+        right: 50%;
+    }
+
+}
+
+.login span:nth-child(4) {
+
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    background: linear-gradient(360deg, #000028, aqua);
+    bottom: 0;
+    left: 0;
+    animation: slidy4 1.5s 1s infinite;
+
+
+}
+
+@keyframes slidy4 {
+
+    0% {
+        bottom: 0%;
+    }
+
+    100% {
+
+        bottom: 50%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form {
+    width: 90%;
+    height: 80%;
+    /* border: .2rem solid #FC0; */
+    margin: 0 auto;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFF;
+
+}
+
+.form-example {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+}
+
+.form-example h4 {
+    font-size: 2.3rem;
+}
+
+.form-example input {
+    display: inline-block;
+    height: 3rem;
+    width: 20rem;
+    border-radius: .8rem;
+}
+
+.form-example2 {
+    text-align: center;
+}
+
+.form-example2 input {
+
+    display: inline-block;
+    height: 4rem;
+    width: 20rem;
+    border-radius: .8rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: #B2BEB5;
+    border: .1rem solid #B2BEB5;
+
+    &:hover {
+
+        box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow, 0 0 200px yellow;
+
+    }
+
+}
+
+
+
+/* ul{
+    position: relative;
+    letter-spacing: .18rem;
+    overflow: hidden;
+}
+
+.left-hero ul li{
+
+    position: relative;
+    top: 0;
+    animation: sli 4s steps(2) infinite;
+    
+
+}
+
+
+
+
+
+@keyframes sli {
+
+    100%{
+
+        top: -16rem;
+    }
+    
+}
+
+
+
+.left-hero ul li:nth-child(1)::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /* background-color: #FC0; */
+/* background-color:#000028;
+    border-left: .4rem solid blue;
+    animation: ani 1s 1.5s steps(6) infinite alternate; */
+
+
+/* } */
+
+/* .left-hero ul li:nth-child(2)::after{
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    /* background-color: #FC0; */
+/* background-color:#000028;
+    border-left: .4rem solid blue;
+    animation: ani2 1s 3s steps(6) infinite alternate; */
+
+
+/* } */
+*/
+/* @keyframes ani2 {
+
+    
+    100%{
+
+        left: 119%;
+       
+
+    }
+    
+}
+
+@keyframes ani {
+
+    
+    100%{
+        left: 105%;
+
+    }
+    
+}  */
+
+
+
+/* .span1{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    height: 2px;
+    background-color: aqua;
+    animation: slide1 2s infinite alternate;
+}
+
+.span2{
+    position: absolute;
+    bottom: 0%;
+    right: 50%;
+    height: 2px;
+    background-color: aqua;
+    animation: slide2 2s infinite alternate;
+} */
+
+
+@keyframes slide2 {
+
+    from {
+
+        width: 0%;
+
+    }
+
+    to {
+
+        width: 50%;
+
+    }
+
+}
+
+
+
+
+
+.night-sky {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.shooting-stars {
+    z-index: 10;
+    width: 5px;
+    height: 85px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+    animation: animShootingStar 10s linear infinite;
+}
+
+@keyframes animShootingStar {
+    from {
+
+        transform: translateY(0px) translateX(0px) rotate(-45deg);
+        opacity: 1;
+        height: 5px;
+
+
+    }
+
+    to {
+        transform: translateY(-1560px) translateX(-1560px) rotate(-45deg);
+        opacity: 1;
+        height: 800px;
+    }
+}
